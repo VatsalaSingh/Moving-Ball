@@ -10,11 +10,22 @@
 			width:100px;
 			background: linear-gradient(black,blue);
 			border-radius: 50px;
+			position: fixed;
 		}
 	</style>
 
 	<script>
-		var el=getElementById('ball');
-		el.
+		var el=document.getElementById('ball');
+		document.addEventListener('keydown',check);
+		function check(e){
+			if(e.keyCode==37){console.log("left")
+				el.style.left="-50px";}
+			if(e.keyCode==38){console.log("up")
+				el.style.top="-50px";}
+			if(e.keyCode==39){console.log("right")
+				el.style.left="50px";}
+			if(e.keyCode==40){console.log('down')
+				el.style.top="50px"}
+		}
 	</script>
 </body>
